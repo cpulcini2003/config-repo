@@ -2,4 +2,8 @@ spring:
   application:
     name: foo
   profiles:
-    active: dev,mysql
+    active: prod
+  datasource:
+    url: jdbc:postgresql://localhost:5332/transactions
+    username: postgres
+    password: postgres
