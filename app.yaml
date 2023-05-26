@@ -4,6 +4,6 @@ spring:
   profiles:
     active: prod-new
   datasource:
-    url: jdbc:postgresql://localhost:5332/transactions
+    url: jdbc:postgresql://transaction-db.postgres.database.azure.com:5432/transactions
     username: postgres
-    password: postgres
+    password: psg1vmware1!
