@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: transactions
+  profiles:
+    active: prod-new
+  datasource:
+    url: jdbc:postgresql://transaction-db.postgres.database.azure.com:5432/transactions
+    username: postgres@transaction-db.postgres.database.azure.com
+    password: psg1vmware1!
