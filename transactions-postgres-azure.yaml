@@ -9,7 +9,9 @@ spring:
     password: psg1vmware1!
   jpa:
     hibernate:
-      ddl-auto=create-drop
-      show-sql=true
-      properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
-      properties.hibernate.format_sql=true
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
