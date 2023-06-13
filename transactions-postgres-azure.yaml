@@ -5,8 +5,8 @@ spring:
     active: prod-azure-postgres
   datasource:
     url: jdbc:postgresql://transaction-db.postgres.database.azure.com:5432/transactions
-    username: postgres@transaction-db.postgres.database.azure.com
-    password: psg1vmware1!
+    username: Admin1
+    password: Postgres1!
   jpa:
     hibernate:
       ddl-auto: create-drop
