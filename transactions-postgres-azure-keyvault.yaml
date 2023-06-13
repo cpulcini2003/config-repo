@@ -5,7 +5,7 @@ spring:
   profiles:
     active: prod-azure-postgres
   datasource:
-    url: jdbc:postgresql://transaction-db.postgres.database.azure.com:5432/transactions
+    url: $(DB-USERNAME)
     username: Admin1
     password: Postgres1!
   jpa:
@@ -19,7 +19,7 @@ spring:
 azure:
   keyvault:
     enabled: true
-    uri: ***
+    uri: https://cpukeyvault.vault.azure.net/
     client-id: ***
     client-key: ***
     tenant-id: ***
