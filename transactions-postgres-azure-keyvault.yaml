@@ -21,7 +21,6 @@ azure:
     enabled: true
     uri: https://cpukeyvault.vault.azure.net/
     client-id: 5f125be4-c906-4298-8246-ceba13a2596d
-    client-key: ***
     tenant-id: 85a526d9-692d-4411-8cdd-82026c771bc1
     token-acquire-timeout-seconds: 60
     refresh-interval: 1800000
