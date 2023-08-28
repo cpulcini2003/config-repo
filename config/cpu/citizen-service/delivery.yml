@@ -29,7 +29,7 @@ spec:
           spring-boot-convention/service-intent-postgres
         developer.conventions/target-containers: workload
         kubectl.kubernetes.io/last-applied-configuration: |
-          {"apiVersion":"carto.run/v1alpha1","kind":"Workload","metadata":{"annotations":{},"labels":{"app.kubernetes.io/part-of":"citizen-service","apps.tanzu.vmware.com/auto-configure-actuators":"false","apps.tanzu.vmware.com/has-tests":"false","apps.tanzu.vmware.com/workload-type":"web"},"name":"citizen-service","namespace":"cpu"},"spec":{"build":{"env":[{"name":"BP_JVM_VERSION","value":"17"}]},"params":[{"name":"annotations","value":{"autoscaling.knative.dev/minScale":"1"}},{"name":"gitops_server_address","value":"https://github.com/"},{"name":"gitops_repository_owner","value":"cpulcini2003"},{"name":"gitops_repository_name","value":"config-repo"},{"name":"gitops_ssh_secret","value":"git-secret"},{"name":"git_user_email","value":"cpulcini2003@gmail.com"},{"name":"git_user_name","value":"cpulcini2003"}],"serviceClaims":[{"name":"database","ref":{"apiVersion":"services.apps.tanzu.vmware.com/v1alpha1","kind":"ClassClaim","name":"postgres-sample"}}],"source":{"git":{"ref":{"branch":"main"},"url":"https://github.com/cpulcini2003/citizen1"}}}}
+          {"apiVersion":"carto.run/v1alpha1","kind":"Workload","metadata":{"annotations":{},"labels":{"app.kubernetes.io/part-of":"citizen-service","apps.tanzu.vmware.com/auto-configure-actuators":"false","apps.tanzu.vmware.com/has-tests":"false","apps.tanzu.vmware.com/workload-type":"web"},"name":"citizen-service","namespace":"cpu"},"spec":{"build":{"env":[{"name":"BP_JVM_VERSION","value":"17"}]},"params":[{"name":"annotations","value":{"autoscaling.knative.dev/minScale":"1"}},{"name":"gitops_server_address","value":"https://github.com/"},{"name":"gitops_repository_owner","value":"cpulcini2003"},{"name":"gitops_repository_name","value":"config-repo"},{"name":"gitops_ssh_secret","value":"git-secret"},{"name":"git_user_email","value":"cpulcini2003@gmail.com"},{"name":"git_user_name","value":"cpulcini2003"}],"serviceClaims":[{"name":"database","ref":{"apiVersion":"services.apps.tanzu.vmware.com/v1alpha1","kind":"ClassClaim","name":"citizen"}}],"source":{"git":{"ref":{"branch":"main"},"url":"https://github.com/cpulcini2003/citizen1"}}}}
         services.conventions.carto.run/postgres: postgresql/42.5.4
       labels:
         app.kubernetes.io/component: run
@@ -45,7 +45,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: us-east1-docker.pkg.dev/tap-sandbox-dev/tap-handy-calf/citizen-service-cpu@sha256:20161e5d26fd036fbce0fce9332a8b123fb154c38314a707f0cb8b5e8dc2104b
+        image: us-east1-docker.pkg.dev/tap-sandbox-dev/tap-intense-platypus/citizen-service-cpu@sha256:f844aee091c5a342ce320af660999b968b8537a75aec8f12813492aab188df77
         name: workload
         ports:
         - containerPort: 8080
