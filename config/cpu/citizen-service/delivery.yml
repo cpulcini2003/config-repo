@@ -45,7 +45,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: us-east1-docker.pkg.dev/tap-sandbox-dev/tap-intense-platypus/citizen-service-cpu@sha256:f844aee091c5a342ce320af660999b968b8537a75aec8f12813492aab188df77
+        image: europe-west4-docker.pkg.dev/tap-sandbox-dev/tap-relevant-hermit/citizen-service-cpu@sha256:4857cbd9582f04b9f9e838b88a561d41dc0788ff4238a53cdf0c50e6feae1dfd
         name: workload
         ports:
         - containerPort: 8080
