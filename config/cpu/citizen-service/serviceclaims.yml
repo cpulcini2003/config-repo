@@ -16,10 +16,10 @@ waitRules:
 apiVersion: servicebinding.io/v1alpha3
 kind: ServiceBinding
 metadata:
-  name: citizen-service-database
+  name: citizen-service-citizen-database
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"carto.run/v1alpha1","kind":"Workload","metadata":{"annotations":{},"labels":{"app.kubernetes.io/part-of":"citizen-service","apps.tanzu.vmware.com/auto-configure-actuators":"false","apps.tanzu.vmware.com/has-tests":"false","apps.tanzu.vmware.com/workload-type":"web"},"name":"citizen-service","namespace":"cpu"},"spec":{"build":{"env":[{"name":"BP_JVM_VERSION","value":"17"}]},"params":[{"name":"annotations","value":{"autoscaling.knative.dev/minScale":"1"}},{"name":"gitops_server_address","value":"https://github.com/"},{"name":"gitops_repository_owner","value":"cpulcini2003"},{"name":"gitops_repository_name","value":"config-repo"},{"name":"gitops_ssh_secret","value":"git-secret"},{"name":"git_user_email","value":"cpulcini2003@gmail.com"},{"name":"git_user_name","value":"cpulcini2003"}],"serviceClaims":[{"name":"database","ref":{"apiVersion":"services.apps.tanzu.vmware.com/v1alpha1","kind":"ClassClaim","name":"citizen"}}],"source":{"git":{"ref":{"branch":"main"},"url":"https://github.com/cpulcini2003/citizen1"}}}}
+      {"apiVersion":"carto.run/v1alpha1","kind":"Workload","metadata":{"annotations":{},"labels":{"app.kubernetes.io/part-of":"citizen-service","apps.tanzu.vmware.com/auto-configure-actuators":"false","apps.tanzu.vmware.com/has-tests":"false","apps.tanzu.vmware.com/workload-type":"web"},"name":"citizen-service","namespace":"cpu"},"spec":{"build":{"env":[{"name":"BP_JVM_VERSION","value":"17"}]},"params":[{"name":"annotations","value":{"autoscaling.knative.dev/minScale":"1"}},{"name":"gitops_server_address","value":"https://github.com/"},{"name":"gitops_repository_owner","value":"cpulcini2003"},{"name":"gitops_repository_name","value":"config-repo"},{"name":"gitops_ssh_secret","value":"git-secret"},{"name":"git_user_email","value":"cpulcini2003@gmail.com"},{"name":"git_user_name","value":"cpulcini2003"}],"serviceClaims":[{"name":"citizen-database","ref":{"apiVersion":"services.apps.tanzu.vmware.com/v1alpha1","kind":"ClassClaim","name":"citizen"}}],"source":{"git":{"ref":{"branch":"main"},"url":"https://github.com/cpulcini2003/citizen1"}}}}
     autoscaling.knative.dev/minScale: "1"
     kapp.k14s.io/change-group: servicebinding.io/ServiceBindings
   labels:
@@ -30,7 +30,7 @@ metadata:
     app.kubernetes.io/component: run
     carto.run/workload-name: citizen-service
 spec:
-  name: database
+  name: citizen-database
   service:
     apiVersion: services.apps.tanzu.vmware.com/v1alpha1
     kind: ClassClaim
