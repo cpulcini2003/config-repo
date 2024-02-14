@@ -53,7 +53,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv-glad-filly/app1-developer1@sha256:16ec937de3eeb2caea4a9a4dacab8af79eb2eca2fb6a5beed1e2a2acd908caa8
+        image: us-east1-docker.pkg.dev/tap-sandbox-dev/tapv-glad-filly/app1-developer1@sha256:dbbe4a40d1ecc19237562991e5e0704b69356e03e4f5782e4dec9b3d8e3801ce
         livenessProbe:
           httpGet:
             path: /livez
